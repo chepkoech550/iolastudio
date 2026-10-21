@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iOLA Studio | Admin</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f8f7f3;
+      color: #22231f;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      padding: 24px 6%;
+      background: white;
+      border-bottom: 1px solid #e5e4df;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 32px; font-weight: 800; }
+    a { color: inherit; }
+    main { max-width: 960px; margin: 50px auto; padding: 20px; }
+    h1 { font-size: 44px; letter-spacing: -2px; }
+    .panel {
+      background: white;
+      padding: 30px;
+      border: 1px solid #e5e4df;
+      margin-bottom: 20px;
+    }
+    label { display: block; margin-top: 18px; font-size: 14px; }
+    input {
+      width: 100%;
+      padding: 13px;
+      margin-top: 7px;
+      border: 1px solid #ccc;
+      font: inherit;
+    }
+    button {
+      margin-top: 20px;
+      padding: 14px 25px;
+      background: #22231f;
+      color: white;
+      border: 0;
+      cursor: pointer;
+    }
+    .hidden { display: none; }
+    #message { margin: 15px 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">iOLA</div>
+  <a href="/">VIEW STUDIO ↗</a>
+</header>
+
+<main>
+  <h1>STUDIO ADMIN</h1>
+  <p>Manage your products, artwork and collections.</p>
+
+  <div id="message"></div>
+
+  <section id="login" class="panel hidden">
+    <h2>Administrator Sign In</h2>
+    <form id="loginform">
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required>
+
+      <button type="submit">SIGN IN</button>
+    </form>
+  </section>
+
+  <section id="dashboard" class="panel hidden">
+    <h2>Welcome to iOLA Studio</h2>
+    <p>Your administrator account is connected.</p>
+    <p>Product management will be added next.</p>
+    <button id="logout">SIGN OUT</button>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
